@@ -70,8 +70,6 @@ class Room(core_models.TimeStampedModel):
 
     """Room Model Definition """
 
-    pass
-
     name = models.CharField(max_length=140)
     description = models.TextField()
     country = CountryField()
@@ -108,6 +106,6 @@ class Room(core_models.TimeStampedModel):
         for review in all_reviews:
             all_ratings += review.rating_average()
         try:
-            return all_ratings / len(all_reviews)
+            return round(all_ratings / len(all_reviews), 2)
         except ZeroDivisionError:
             return "0"
