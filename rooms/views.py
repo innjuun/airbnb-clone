@@ -1,11 +1,12 @@
+from django.views.generic import ListView
+from . import models
+
+"""
 from math import ceil
 from datetime import datetime
 from django.shortcuts import render, redirect
 from django.core.paginator import Paginator, EmptyPage
 from django.http import HttpResponse
-from . import models
-
-
 def all_rooms(request):
     page = request.GET.get("page", 1)
     room_list = models.Room.objects.all()
@@ -13,5 +14,15 @@ def all_rooms(request):
     try:
         rooms = paginator.page(int(page))
         return render(request, "rooms/home.html", context={"page": rooms},)
-    except Exception:
+    except EmptyPage:
         return redirect("/")
+"""
+
+
+class HomeView(ListView):
+    """ HomeView Definition """
+
+    model = models.Room
+    paginate_by = 10
+    paginate_orphans = 5
+    ordering = "created"
