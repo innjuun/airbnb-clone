@@ -1,0 +1,23 @@
+{
+  "name": "airbnb-clone",
+  "version": "1.0.0",
+  "description": "airbnb-clone",
+  "dependencies": {
+    "gulp-csso": "^4.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp": "^4.0.2",
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^1.4.6"
+  },
+  "scripts": {
+    "css": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/innjuun/airbnb-clone.git"
+  },
+  "homepage": "https://github.com/innjuun/airbnb-clone#readme"
+}
