@@ -7,7 +7,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-postcss": "^8.0.0",
     "gulp": "^4.0.2",
-    "node-sass": "^4.14.1"
+    "node-sass": "^7.0.0"
   },
   "devDependencies": {
     "tailwindcss": "^1.4.6"
